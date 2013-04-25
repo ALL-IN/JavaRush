@@ -35,7 +35,11 @@ public class Solution
                  break;
         }
         for ( String q : a)
-           System.out.println(MovieFactory.getMovie(q).getClass().getSimpleName());
+        {
+
+            System.out.println(MovieFactory.getMovie(q).getClass().getSimpleName());
+        }
+
 
     }
 
@@ -59,7 +63,7 @@ public class Solution
 
             else if ("triller".equals(key))
             {
-                movie = new Cartoon();
+                movie = new Triller();
             }
             //Напишите тут ваш код, пункты 5,6
 
@@ -79,7 +83,7 @@ public class Solution
     {
 
     }
-    static class Thriller extends Movie
+    static class Triller extends Movie
     {
 
     }

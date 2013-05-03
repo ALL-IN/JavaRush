@@ -4,6 +4,11 @@ public abstract class AbstractRobot
 {
     private static int hitCount;
     private String name;
+
+    public String getName()
+    {
+        return name;
+    }
     public BodyPart attack()
     {
         BodyPart attackedBodyPart = null;
@@ -17,12 +22,14 @@ public abstract class AbstractRobot
             attackedBodyPart =  BodyPart.HEAD;
         } else if (hitCount == 3)
         {
-            hitCount = 0;
+
             attackedBodyPart =  BodyPart.LEG;
         }  else if (hitCount == 4)
         {
-            attackedBodyPart =  BodyPart.BREST;
+            hitCount = 0;
+            attackedBodyPart =  BodyPart.CHEST;
         }
+
         return attackedBodyPart;
     }
 
@@ -39,11 +46,12 @@ public abstract class AbstractRobot
             defencedBodyPart =  BodyPart.LEG;
         } else if (hitCount == 3)
         {
-            hitCount = 0;
+
             defencedBodyPart =  BodyPart.ARM;
         }  else if (hitCount == 4)
         {
-            defencedBodyPart =  BodyPart.BREST;
+            hitCount = 0;
+            defencedBodyPart =  BodyPart.CHEST;
         }
         return defencedBodyPart;
     }

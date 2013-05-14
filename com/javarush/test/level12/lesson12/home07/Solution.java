@@ -1,5 +1,9 @@
 package com.javarush.test.level12.lesson12.home07;
 
+/*
+ Напиши интерфейсы Fly(летать), Swim(плавать), Run(бегать).
+ Добавь эти интерфейсы классам Duck(утка), Penguin(пингвин), Toad(жаба), CaptainJackSparrow(Капитан Джек Воробей).
+ */
 public class Solution
 {
     public static void main(String[] args)
@@ -24,47 +28,69 @@ public class Solution
 
     public class Duck implements Fly, Swim
     {
-        public void fly(){
-
+        @Override
+        public void fly()
+        {
+            //To change body of implemented methods use File | Settings | File Templates.
         }
-        public void swim(){
 
+        @Override
+        public void swim()
+        {
+            //To change body of implemented methods use File | Settings | File Templates.
+        }
+        //не может бегать
+    }
+
+    public class Penguin  implements Run, Swim
+    {
+
+        @Override
+        public void run()
+        {
+            //To change body of implemented methods use File | Settings | File Templates.
+        }
+
+        @Override
+        public void swim()
+        {
+            //To change body of implemented methods use File | Settings | File Templates.
         }
     }
 
-    public class Penguin   implements Swim, Run
+    public class Toad implements Swim
     {
-        public void swim(){
 
-        }
-        public void run(){
 
+
+        @Override
+        public void swim()
+        {
+            //To change body of implemented methods use File | Settings | File Templates.
         }
 
 
     }
 
-    public class Toad   implements Swim, Run, Fly
+    public class CaptainJackSparrow implements Run, Swim, Fly//Капитан Джек Воробей :)
     {
-        public void swim(){
 
-        }
-        public void run(){
-
-        }
-        public void fly(){
-
+        @Override
+        public void run()
+        {
+            //To change body of implemented methods use File | Settings | File Templates.
         }
 
-    }
-
-    public class CaptainJackSparrow implements Run, Swim
-    {
-        public void run(){
-
+        @Override
+        public void swim()
+        {
+            //To change body of implemented methods use File | Settings | File Templates.
         }
-        public void swim(){
 
+        @Override
+        public void fly()
+        {
+            //To change body of implemented methods use File | Settings | File Templates.
         }
     }
 }
